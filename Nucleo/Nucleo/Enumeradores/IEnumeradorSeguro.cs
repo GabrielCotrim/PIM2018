@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Nucleo
+namespace Nucleo.Enumeradores
 {
-    public class EnumeradorSeguro
+    public interface IEnumeradorSeguro<k>
     {
+        k Codigo<k>();
     }
 }

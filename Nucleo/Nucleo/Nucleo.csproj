@@ -41,7 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EnumeradorSeguro.cs" />
+    <Compile Include="Enumeradores\EnumeradorSeguro.cs" />
+    <Compile Include="Enumeradores\IEnumeradorSeguro.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
