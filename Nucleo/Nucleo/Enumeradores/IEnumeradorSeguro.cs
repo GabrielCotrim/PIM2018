@@ -8,6 +8,7 @@ namespace Nucleo.Enumeradores
 {
     public interface IEnumeradorSeguro<k>
     {
-        k Codigo<k>();
+        k Codigo { get; }
+        string Descricao { get; }
     }
 }

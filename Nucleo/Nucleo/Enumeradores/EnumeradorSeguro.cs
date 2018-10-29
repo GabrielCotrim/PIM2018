@@ -6,9 +6,22 @@ using System.Threading.Tasks;
 
 namespace Nucleo.Enumeradores
 {
-    public class EnumeradorSeguro<T, k> : IEnumeradorSeguro<k> where T : IEnumeradorSeguro<k>
+    public class EnumeradorSeguro<T, k> : IEnumeradorSeguro<k>, IComparable where T : IEnumeradorSeguro<k>
     {
-        public k Codigo<k>()
+        private k _codigo;
+        private string _descricao;
+
+        public EnumeradorSeguro(k codigo, string descricao)
+        {
+            _codigo = codigo;
+            _descricao = descricao;
+        }
+
+        public k Codigo => throw new NotImplementedException();
+
+        public string Descricao => throw new NotImplementedException();
+
+        public int CompareTo(object obj)
         {
             throw new NotImplementedException();
         }
