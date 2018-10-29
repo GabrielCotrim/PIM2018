@@ -17,13 +17,17 @@ namespace Nucleo.Enumeradores
             _descricao = descricao;
         }
 
-        public k Codigo => throw new NotImplementedException();
+        public k Codigo => _codigo;
 
-        public string Descricao => throw new NotImplementedException();
+        public string Descricao => _descricao;
 
-        public int CompareTo(object obj)
+        public int CompareTo(object other)
         {
-            throw new NotImplementedException();
+            if (other as IEnumeradorSeguro<k> == null) return 1;
+
+            var otherEnumerador = other as IEnumeradorSeguro<k>;
+
+            return CompareTo(otherEnumerador);
         }
     }
 }
