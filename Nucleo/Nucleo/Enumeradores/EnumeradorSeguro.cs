@@ -17,8 +17,12 @@ namespace Nucleo.Enumeradores
             _descricao = descricao;
         }
 
-        public k Codigo => _codigo;
+        public IEnumerable<T> ObtenhaTodos()
+        {
+            throw new NotImplementedException();
+        }
 
+        public k Codigo => _codigo;
         public string Descricao => _descricao;
 
         public int CompareTo(object other)
