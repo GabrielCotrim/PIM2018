@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Enumeradores\EnumeradorSeguro.cs" />
+    <Compile Include="Enumeradores\EnumeradorSituacaoDaTarefa.cs" />
     <Compile Include="Enumeradores\IEnumeradorSeguro.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
