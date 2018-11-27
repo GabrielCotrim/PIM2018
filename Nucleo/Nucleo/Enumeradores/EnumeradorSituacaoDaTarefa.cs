@@ -15,7 +15,7 @@ namespace Nucleo.Enumeradores
         public static EnumeradorSituacaoDaTarefa RETORNO = new EnumeradorSituacaoDaTarefa(5, "Retornado");
         public static EnumeradorSituacaoDaTarefa FECHADO = new EnumeradorSituacaoDaTarefa(6, "Fechado");
 
-        public EnumeradorSituacaoDaTarefa(int codigo, string descricao) : base(codigo, descricao)
+        private EnumeradorSituacaoDaTarefa(int codigo, string descricao) : base(codigo, descricao)
         {
         }
     }
