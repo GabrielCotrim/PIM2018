@@ -15,7 +15,7 @@ namespace Nucleo.Enumeradores
         private k _codigo;
         private string _descricao;
 
-        public EnumeradorSeguro(k codigo, string descricao)
+        protected EnumeradorSeguro(k codigo, string descricao)
         {
             _codigo = codigo;
             _descricao = descricao;
