@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Nucleo.Enumeradores
 {
-    public class EnumeradorPrioridadeDaTarefa : EnumeradorSeguro<EnumeradorPrioridadeDaTarefa, int>
+    public sealed class EnumeradorPrioridadeDaTarefa : EnumeradorSeguro<EnumeradorPrioridadeDaTarefa, int>
     {
         public static EnumeradorPrioridadeDaTarefa QUALQUER = new EnumeradorPrioridadeDaTarefa(1, "Qualquer");
         public static EnumeradorPrioridadeDaTarefa BAIXA = new EnumeradorPrioridadeDaTarefa(2, "Baixa");

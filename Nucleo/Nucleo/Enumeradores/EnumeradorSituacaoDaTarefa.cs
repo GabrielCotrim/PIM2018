@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Nucleo.Enumeradores
 {
-    public class EnumeradorSituacaoDaTarefa : EnumeradorSeguro<EnumeradorSituacaoDaTarefa, int>
+    public sealed class EnumeradorSituacaoDaTarefa : EnumeradorSeguro<EnumeradorSituacaoDaTarefa, int>
     {
         public static EnumeradorSituacaoDaTarefa NOVO = new EnumeradorSituacaoDaTarefa(1, "Novo");
         public static EnumeradorSituacaoDaTarefa ATRIBUIDO = new EnumeradorSituacaoDaTarefa(2, "Atribuido");
