@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Nucleo.Enumeradores;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,6 +7,8 @@ using System.Threading.Tasks;
 
 namespace Nucleo.Negocio
 {
+
+    
     public class Login
     {
         private const int CHAVE = 1010;
@@ -20,6 +23,30 @@ namespace Nucleo.Negocio
         {
             this._senha = senha;
             this.User = user;
+        }
+
+        public class Usuario
+        {
+
+            public int Codigo { get; set; }
+            public string Nome { get; set; }
+            public EnumeradorClassificacaoUsuario Classificacao { get; set; }
+            public Login Login { get; set; }
+
+            public override int GetHashCode()
+            {
+                return Codigo.GetHashCode();
+            }
+
+            public override bool Equals(object obj)
+            {
+                return (obj is Usuario) && ((Usuario)obj).Codigo.Equals(this.Codigo); 
+            }
+        }
+
+        public bool EhSenhaValida(string senhaDescriptografada)
+        {
+            return senhaDescriptografada.Equals(_senha);
         }
 
         private string ObtenhaSenhaCriptografada(string senha)
