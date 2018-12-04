@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Nucleo.Negocio
 {
-    public class Categoria
+    public class Categoria : IEntidadeDeNegocio
     {
         public int Codigo { get; set; }
         public string Descricao { get; set; }

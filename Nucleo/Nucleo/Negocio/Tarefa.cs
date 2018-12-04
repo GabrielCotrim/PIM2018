@@ -6,7 +6,7 @@ using static Nucleo.Negocio.Login;
 
 namespace Nucleo.Negocio
 {
-    public class Tarefa
+    public class Tarefa : IEntidadeDeNegocio
     {
 
         public int Codigo { get; set; }
