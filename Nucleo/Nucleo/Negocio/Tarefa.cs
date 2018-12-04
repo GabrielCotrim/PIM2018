@@ -6,10 +6,9 @@ using static Nucleo.Negocio.Login;
 
 namespace Nucleo.Negocio
 {
-    public class Tarefa : IEntidadeDeNegocio
+    public class Tarefa : EntidadeDeNegocio
     {
 
-        public int Codigo { get; set; }
         public Usuario Relator { get; set; }
         public Usuario UsuarioAtribuido { get; set; }
         public List<Categoria> Categorias { get; set; }

@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace Nucleo.Negocio
 {
-    public class Categoria : IEntidadeDeNegocio
+    public class Categoria : EntidadeDeNegocio
     {
-        public int Codigo { get; set; }
         public string Descricao { get; set; }
         public Projeto Projeto { get; set; }
     }

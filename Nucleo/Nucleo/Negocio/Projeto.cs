@@ -7,7 +7,7 @@ using static Nucleo.Negocio.Login;
 
 namespace Nucleo.Negocio
 {
-    public class Projeto : IEntidadeDeNegocio
+    public class Projeto : EntidadeDeNegocio
     {
         public int Codigo { get; set; }
         public string Descricao { get; set; }

@@ -25,10 +25,8 @@ namespace Nucleo.Negocio
             this.User = user;
         }
 
-        public class Usuario : IEntidadeDeNegocio
+        public class Usuario : EntidadeDeNegocio
         {
-
-            public int Codigo { get; set; }
             public string Nome { get; set; }
             public EnumeradorClassificacaoUsuario Classificacao { get; set; }
             public Login Login { get; set; }
