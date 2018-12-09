@@ -1,9 +1,9 @@
 ﻿using Nucleo.Enumeradores;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Nucleo.Negocio
 {
@@ -30,6 +30,7 @@ namespace Nucleo.Negocio
             public string Nome { get; set; }
             public EnumeradorClassificacaoUsuario Classificacao { get; set; }
             public Login Login { get; set; }
+            public Image Imagem { get; set; }
 
             public override int GetHashCode()
             {
