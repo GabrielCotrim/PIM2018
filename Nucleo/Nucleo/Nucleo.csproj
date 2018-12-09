@@ -52,6 +52,7 @@
     <Compile Include="Negocio\Categoria.cs" />
     <Compile Include="Negocio\EntidadeDeNegocio.cs" />
     <Compile Include="Negocio\IEntidadeDeNegocio.cs" />
+    <Compile Include="Negocio\ImageTratada.cs" />
     <Compile Include="Negocio\Login.cs" />
     <Compile Include="Negocio\Projeto.cs" />
     <Compile Include="Negocio\Tarefa.cs" />

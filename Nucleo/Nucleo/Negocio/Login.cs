@@ -30,7 +30,7 @@ namespace Nucleo.Negocio
             public string Nome { get; set; }
             public EnumeradorClassificacaoUsuario Classificacao { get; set; }
             public Login Login { get; set; }
-            public Image Imagem { get; set; }
+            public ImagemTratada Imagem { get; set; }
 
             public override int GetHashCode()
             {
