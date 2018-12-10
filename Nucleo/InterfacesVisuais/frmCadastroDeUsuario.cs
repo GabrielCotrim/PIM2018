@@ -1,4 +1,5 @@
-﻿using Nucleo.Negocio;
+﻿using Nucleo.Enumeradores;
+using Nucleo.Negocio;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,9 +23,10 @@ namespace InterfacesVisuais
             InitializeComponent();
         }
 
-        private void btnSalvar_Click(object sender, EventArgs e)
+        protected override void OnShown(EventArgs e)
         {
-
+            bsCboClassificacao.DataSource = EnumeradorClassificacaoUsuario.ObtenhaTodos().OrderBy(a => a.Codigo);
+            cboClassificacao.SelectedIndex = -1;
         }
 
         private void btnPesquisar_Click(object sender, EventArgs e)

@@ -21,7 +21,7 @@ namespace Nucleo.Enumeradores
             _descricao = descricao;
         }
 
-        public List<T> ObtenhaTodos()
+        public static List<T> ObtenhaTodos()
         {
             return ObtenhaTodos<T>();
         }
@@ -31,12 +31,12 @@ namespace Nucleo.Enumeradores
             return outroObjeto is EnumeradorSeguro<T,k> && ((EnumeradorSeguro<T, k>)outroObjeto).Codigo.Equals(Codigo);
         }
         
-        public T ObtenhaEnumerador(k codigo)
+        public static T ObtenhaEnumerador(k codigo)
         {
             return ObtenhaEnumerador<T>(codigo);
         }
 
-        protected TEnumerador ObtenhaEnumerador<TEnumerador>(k codigo) where TEnumerador : IEnumeradorSeguro<k>
+        protected static TEnumerador ObtenhaEnumerador<TEnumerador>(k codigo) where TEnumerador : IEnumeradorSeguro<k>
         {
             foreach(var enumerador in ObtenhaTodos<TEnumerador>())
             {
@@ -48,10 +48,15 @@ namespace Nucleo.Enumeradores
             return default(TEnumerador);
         }
 
-        protected List<TEnumerador> ObtenhaTodos<TEnumerador>() where TEnumerador : IEnumeradorSeguro<k>
+        protected static List<TEnumerador> ObtenhaTodos<TEnumerador>() where TEnumerador : IEnumeradorSeguro<k>
         {
             var tipo = typeof(TEnumerador);
             return tipo.GetFields(BindingFlags.Static | BindingFlags.Public).Select(campo => (TEnumerador)campo.GetValue(null)).ToList();
+        }
+
+        public override string ToString()
+        {
+            return Descricao;
         }
 
     }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadastroDeUsuario));
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.flwLateralBtn = new System.Windows.Forms.FlowLayoutPanel();
@@ -48,8 +49,10 @@
             this.btnAnotacao = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtAnotacao = new System.Windows.Forms.RichTextBox();
+            this.bsCboClassificacao = new System.Windows.Forms.BindingSource(this.components);
             this.flwLateralBtn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsCboClassificacao)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -128,6 +131,7 @@
             // 
             // cboClassificacao
             // 
+            this.cboClassificacao.DataSource = this.bsCboClassificacao;
             this.cboClassificacao.FormattingEnabled = true;
             this.cboClassificacao.Location = new System.Drawing.Point(104, 71);
             this.cboClassificacao.Name = "cboClassificacao";
@@ -249,6 +253,7 @@
             this.Text = "Cadastro de usuário";
             this.flwLateralBtn.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsCboClassificacao)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -275,5 +280,6 @@
         private System.Windows.Forms.Label lblFoto;
         private System.Windows.Forms.Button btnAnotacao;
         private System.Windows.Forms.RichTextBox txtAnotacao;
+        private System.Windows.Forms.BindingSource bsCboClassificacao;
     }
 }
