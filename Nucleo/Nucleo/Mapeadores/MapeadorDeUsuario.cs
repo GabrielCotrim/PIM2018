@@ -22,7 +22,7 @@ namespace Nucleo.Mapeadores
            ,<UserTipoUsuario, int,>
            ,<UserNomeUser, varchar(50),>
            ,<UserSenha, varchar(50),>
-           ,<UserCodFoto, int,>)"
+           ,<UserCodFoto, int,>)";
         }
     }
 }

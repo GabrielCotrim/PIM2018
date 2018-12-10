@@ -28,16 +28,6 @@ namespace InterfacesVisuais
             bsCboClassificacao.DataSource = EnumeradorClassificacaoUsuario.ObtenhaTodos().Where(a => !a.Equals(EnumeradorClassificacaoUsuario.PROJETO)).OrderBy(a => a.Codigo);
         }
 
-        private void btnAnotacao_Click(object sender, EventArgs e)
-        {
-            txtAnotacao.Visible = true;
-        }
-
-        private void btnAnotacao_Leave(object sender, EventArgs e)
-        {
-            txtAnotacao.Visible = false;
-        }
-
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
             var conn = AuxilliarDeBd.Instancia.CreateConnection();
