@@ -16,7 +16,7 @@ namespace Nucleo.Negocio
             ImagemByte = ImagemByte;
         }
 
-        public Image Imagem => Imagem != null ? Imagem : ConvertaEmImagem(ImagemByte);
+        public Image Imagem { get; set; }
         public byte[] ImagemByte { get; set; }
 
         public Image ConvertaEmImagem(byte[] imagemByte)

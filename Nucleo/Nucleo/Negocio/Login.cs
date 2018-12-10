@@ -31,6 +31,7 @@ namespace Nucleo.Negocio
             public EnumeradorClassificacaoUsuario Classificacao { get; set; }
             public Login Login { get; set; }
             public ImagemTratada Imagem { get; set; }
+            public bool EhAdministrador => Classificacao.Equals(EnumeradorClassificacaoUsuario.ADMINISTRADOR);
 
             public override int GetHashCode()
             {

@@ -73,6 +73,16 @@ namespace InterfacesVisuais.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_sign_info_299086 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_sign-info_299086", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap logon {
             get {
                 object obj = ResourceManager.GetObject("logon", resourceCulture);
