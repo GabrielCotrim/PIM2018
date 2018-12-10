@@ -1,14 +1,9 @@
-﻿using Nucleo.Enumeradores;
-using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
+﻿using System.Linq;
 
 
 namespace Nucleo.Negocio
 {
 
-    
     public class Login
     {
         private const int CHAVE = 1010;
@@ -23,25 +18,6 @@ namespace Nucleo.Negocio
         {
             this._senha = senha;
             this.User = user;
-        }
-
-        public class Usuario : EntidadeDeNegocio
-        {
-            public string Nome { get; set; }
-            public EnumeradorClassificacaoUsuario Classificacao { get; set; }
-            public Login Login { get; set; }
-            public ImagemTratada Imagem { get; set; }
-            public bool EhAdministrador => Classificacao.Equals(EnumeradorClassificacaoUsuario.ADMINISTRADOR);
-
-            public override int GetHashCode()
-            {
-                return Codigo.GetHashCode();
-            }
-
-            public override bool Equals(object obj)
-            {
-                return (obj is Usuario) && ((Usuario)obj).Codigo.Equals(this.Codigo); 
-            }
         }
 
         public bool EhSenhaValida(string senhaDescriptografada)

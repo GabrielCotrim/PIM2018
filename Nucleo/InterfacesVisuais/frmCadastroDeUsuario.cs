@@ -8,12 +8,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static Nucleo.Negocio.Login;
 
 namespace InterfacesVisuais
 {
     public partial class frmCadastroDeUsuario : Form
     {
         Image imagem;
+        Usuario Usuario;
 
         public frmCadastroDeUsuario()
         {
