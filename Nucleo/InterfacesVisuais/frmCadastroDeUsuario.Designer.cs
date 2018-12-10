@@ -43,7 +43,6 @@
             this.lblSenha = new System.Windows.Forms.Label();
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.btnPesquisar = new System.Windows.Forms.Button();
-            this.btnSalvar = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.lblFoto = new System.Windows.Forms.Label();
             this.btnAnotacao = new System.Windows.Forms.Button();
@@ -169,23 +168,13 @@
             // 
             // btnPesquisar
             // 
-            this.btnPesquisar.Location = new System.Drawing.Point(104, 397);
+            this.btnPesquisar.Location = new System.Drawing.Point(222, 397);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(102, 35);
             this.btnPesquisar.TabIndex = 13;
             this.btnPesquisar.Text = "Pesquise imagem";
             this.btnPesquisar.UseVisualStyleBackColor = true;
             this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
-            // 
-            // btnSalvar
-            // 
-            this.btnSalvar.Location = new System.Drawing.Point(218, 397);
-            this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(106, 35);
-            this.btnSalvar.TabIndex = 14;
-            this.btnSalvar.Text = "Salvar";
-            this.btnSalvar.UseVisualStyleBackColor = true;
-            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // openFileDialog1
             // 
@@ -244,7 +233,6 @@
             this.Controls.Add(this.txtAnotacao);
             this.Controls.Add(this.btnAnotacao);
             this.Controls.Add(this.lblFoto);
-            this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.btnPesquisar);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblSenha);
@@ -283,7 +271,6 @@
         private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnPesquisar;
-        private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Label lblFoto;
         private System.Windows.Forms.Button btnAnotacao;
