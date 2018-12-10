@@ -39,6 +39,7 @@
             this.lblNome = new System.Windows.Forms.Label();
             this.lblTipo = new System.Windows.Forms.Label();
             this.cboClassificacao = new System.Windows.Forms.ComboBox();
+            this.bsCboClassificacao = new System.Windows.Forms.BindingSource(this.components);
             this.lblUser = new System.Windows.Forms.Label();
             this.txtUser = new System.Windows.Forms.TextBox();
             this.lblSenha = new System.Windows.Forms.Label();
@@ -49,10 +50,9 @@
             this.btnAnotacao = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtAnotacao = new System.Windows.Forms.RichTextBox();
-            this.bsCboClassificacao = new System.Windows.Forms.BindingSource(this.components);
             this.flwLateralBtn.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsCboClassificacao)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -226,7 +226,7 @@
             this.txtAnotacao.ReadOnly = true;
             this.txtAnotacao.Size = new System.Drawing.Size(147, 59);
             this.txtAnotacao.TabIndex = 17;
-            this.txtAnotacao.Text = "Selecione imagem do usuário";
+            this.txtAnotacao.Text = "Selecione a imagem do usuário";
             this.txtAnotacao.Visible = false;
             // 
             // frmCadastroDeUsuario
@@ -252,8 +252,8 @@
             this.Name = "frmCadastroDeUsuario";
             this.Text = "Cadastro de usuário";
             this.flwLateralBtn.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsCboClassificacao)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
