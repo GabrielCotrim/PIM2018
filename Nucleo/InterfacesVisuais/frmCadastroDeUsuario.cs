@@ -25,7 +25,7 @@ namespace InterfacesVisuais
 
         protected override void OnShown(EventArgs e)
         {
-            bsCboClassificacao.DataSource = EnumeradorClassificacaoUsuario.ObtenhaTodos().OrderBy(a => a.Codigo);
+            bsCboClassificacao.DataSource = EnumeradorClassificacaoUsuario.ObtenhaTodos().Where(a => !a.Equals(EnumeradorClassificacaoUsuario.PROJETO)).OrderBy(a => a.Codigo);
         }
 
         private void btnPesquisar_Click(object sender, EventArgs e)
