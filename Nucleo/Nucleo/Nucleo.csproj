@@ -48,6 +48,8 @@
     <Compile Include="Enumeradores\EnumeradorSeguro.cs" />
     <Compile Include="Enumeradores\EnumeradorSituacaoDaTarefa.cs" />
     <Compile Include="Enumeradores\IEnumeradorSeguro.cs" />
+    <Compile Include="Mapeadores\AuxilliarDeBd.cs" />
+    <Compile Include="Mapeadores\MapeadorDeUsuario.cs" />
     <Compile Include="Negocio\Atividade.cs" />
     <Compile Include="Negocio\Categoria.cs" />
     <Compile Include="Negocio\EntidadeDeNegocio.cs" />

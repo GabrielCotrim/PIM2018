@@ -1,4 +1,5 @@
 ﻿using Nucleo.Enumeradores;
+using Nucleo.Mapeadores;
 using Nucleo.Negocio;
 using System;
 using System.Collections.Generic;
@@ -49,6 +50,13 @@ namespace InterfacesVisuais
         private void btnAnotacao_Leave(object sender, EventArgs e)
         {
             txtAnotacao.Visible = false;
+        }
+
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            var conn = AuxilliarDeBd.Instancia.CreateConnection();
+            conn.Open();
+            conn.Dispose();
         }
     }
 }
