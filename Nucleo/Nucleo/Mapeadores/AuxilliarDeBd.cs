@@ -9,8 +9,7 @@ namespace Nucleo.Mapeadores
     public class AuxilliarDeBd
     {
 
-        private const string CONEXAOPADRAO = @"Server=.\SQLExpress;AttachDbFilename=C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\DATA\BdPIM.mdf;
-                                                Database=BdPIM;Trusted_Connection=Yes;";
+        private const string CONEXAOPADRAO = @"Data Source=DESKTOP-PC1EFCM;Initial Catalog=BdPIM;Integrated Security=True";
 
         public static AuxilliarDeBd Instancia
         { get
@@ -37,6 +36,21 @@ namespace Nucleo.Mapeadores
         private AuxilliarDeBd()
         {
 
+        }
+
+        public SqlCommand CreateCommand(string sql)
+        {
+            using (var conn = CreateConnection())
+            {
+                var transacao = conn.BeginTransaction();
+                using (var command = conn.CreateCommand())
+                {
+                    command.Transaction = transacao;
+                    command.CommandText = sql;
+                    command.CommandType = CommandType.Text;
+                    return command;
+                }
+            }
         }
 
         public SqlDataReader ExecuteReader(string sql)

@@ -44,15 +44,9 @@
             this.txtUser = new System.Windows.Forms.TextBox();
             this.lblSenha = new System.Windows.Forms.Label();
             this.txtSenha = new System.Windows.Forms.TextBox();
-            this.btnPesquisar = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.lblFoto = new System.Windows.Forms.Label();
-            this.btnAnotacao = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txtAnotacao = new System.Windows.Forms.RichTextBox();
             this.flwLateralBtn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bsCboClassificacao)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -72,7 +66,7 @@
             this.flwLateralBtn.Dock = System.Windows.Forms.DockStyle.Right;
             this.flwLateralBtn.Location = new System.Drawing.Point(521, 0);
             this.flwLateralBtn.Name = "flwLateralBtn";
-            this.flwLateralBtn.Size = new System.Drawing.Size(124, 472);
+            this.flwLateralBtn.Size = new System.Drawing.Size(124, 224);
             this.flwLateralBtn.TabIndex = 1;
             // 
             // btnCadastrar
@@ -171,75 +165,15 @@
             this.txtSenha.Size = new System.Drawing.Size(310, 20);
             this.txtSenha.TabIndex = 8;
             // 
-            // btnPesquisar
-            // 
-            this.btnPesquisar.Location = new System.Drawing.Point(222, 397);
-            this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Size = new System.Drawing.Size(102, 35);
-            this.btnPesquisar.TabIndex = 13;
-            this.btnPesquisar.Text = "Pesquise imagem";
-            this.btnPesquisar.UseVisualStyleBackColor = true;
-            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
-            // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // lblFoto
-            // 
-            this.lblFoto.AutoSize = true;
-            this.lblFoto.Location = new System.Drawing.Point(12, 216);
-            this.lblFoto.Name = "lblFoto";
-            this.lblFoto.Size = new System.Drawing.Size(83, 13);
-            this.lblFoto.TabIndex = 15;
-            this.lblFoto.Text = "Foto do usuário:";
-            // 
-            // btnAnotacao
-            // 
-            this.btnAnotacao.BackColor = System.Drawing.SystemColors.Control;
-            this.btnAnotacao.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.btnAnotacao.FlatAppearance.BorderSize = 0;
-            this.btnAnotacao.Image = global::InterfacesVisuais.Properties.Resources.iconfinder_sign_info_299086;
-            this.btnAnotacao.Location = new System.Drawing.Point(330, 211);
-            this.btnAnotacao.Name = "btnAnotacao";
-            this.btnAnotacao.Size = new System.Drawing.Size(32, 31);
-            this.btnAnotacao.TabIndex = 16;
-            this.btnAnotacao.UseVisualStyleBackColor = false;
-            this.btnAnotacao.Click += new System.EventHandler(this.btnAnotacao_Click);
-            this.btnAnotacao.Leave += new System.EventHandler(this.btnAnotacao_Leave);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(104, 211);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(220, 180);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 12;
-            this.pictureBox1.TabStop = false;
-            // 
-            // txtAnotacao
-            // 
-            this.txtAnotacao.BackColor = System.Drawing.SystemColors.Control;
-            this.txtAnotacao.Location = new System.Drawing.Point(368, 211);
-            this.txtAnotacao.Name = "txtAnotacao";
-            this.txtAnotacao.ReadOnly = true;
-            this.txtAnotacao.Size = new System.Drawing.Size(147, 59);
-            this.txtAnotacao.TabIndex = 17;
-            this.txtAnotacao.Text = "Selecione a imagem do usuário";
-            this.txtAnotacao.Visible = false;
             // 
             // frmCadastroDeUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(645, 472);
-            this.Controls.Add(this.txtAnotacao);
-            this.Controls.Add(this.btnAnotacao);
-            this.Controls.Add(this.lblFoto);
-            this.Controls.Add(this.btnPesquisar);
-            this.Controls.Add(this.pictureBox1);
+            this.ClientSize = new System.Drawing.Size(645, 224);
             this.Controls.Add(this.lblSenha);
             this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.lblUser);
@@ -255,7 +189,6 @@
             this.Text = "Cadastro de usuário";
             this.flwLateralBtn.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bsCboClassificacao)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -276,12 +209,7 @@
         private System.Windows.Forms.TextBox txtUser;
         private System.Windows.Forms.Label lblSenha;
         private System.Windows.Forms.TextBox txtSenha;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.Label lblFoto;
-        private System.Windows.Forms.Button btnAnotacao;
-        private System.Windows.Forms.RichTextBox txtAnotacao;
         private System.Windows.Forms.BindingSource bsCboClassificacao;
     }
 }

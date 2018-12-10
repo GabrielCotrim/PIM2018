@@ -16,7 +16,6 @@ namespace InterfacesVisuais
 {
     public partial class frmCadastroDeUsuario : Form
     {
-        Image imagem;
         Usuario Usuario;
 
         public frmCadastroDeUsuario()
@@ -27,19 +26,6 @@ namespace InterfacesVisuais
         protected override void OnShown(EventArgs e)
         {
             bsCboClassificacao.DataSource = EnumeradorClassificacaoUsuario.ObtenhaTodos().Where(a => !a.Equals(EnumeradorClassificacaoUsuario.PROJETO)).OrderBy(a => a.Codigo);
-        }
-
-        private void btnPesquisar_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog f = new OpenFileDialog();
-            f.Filter = "JPG(*.JPG) | *.jpg";
-
-            if (f.ShowDialog() == DialogResult.OK)
-            {
-                imagem = Image.FromFile(f.FileName);
-                pictureBox1.Image = imagem;
-            }
-
         }
 
         private void btnAnotacao_Click(object sender, EventArgs e)
