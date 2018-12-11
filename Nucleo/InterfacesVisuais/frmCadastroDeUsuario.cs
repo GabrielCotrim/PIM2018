@@ -39,8 +39,39 @@ namespace InterfacesVisuais
                 Login = new Login(txtUser.Text, txtSenha.Text)
             };
 
-            _processo.InsiraUsuario(_usuario);
+            if (EhCampoValido())
+            {
+                _processo.InsiraUsuario(_usuario);
+            }
 
+        }
+
+        private bool EhCampoValido()
+        {
+            if (string.IsNullOrEmpty(txtNome.Text))
+            {
+                MensagemCampoInvalido();
+                return false;
+            }
+                
+            if (string.IsNullOrEmpty(txtUser.Text))
+            {
+                MensagemCampoInvalido();
+                return false;
+            }
+                
+            if (string.IsNullOrEmpty(txtSenha.Text))
+            {
+                MensagemCampoInvalido();
+                return false;
+            }
+
+            return true;
+        }
+
+        private void MensagemCampoInvalido()
+        {
+            MessageBox.Show("Campo precisa ser preenchido de forma correta!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
 
         private void btnDeletar_Click(object sender, EventArgs e)
@@ -57,6 +88,10 @@ namespace InterfacesVisuais
                 if (_processo.PossuiUsuario(_usuario))
                 {
                     _processo.DeleteUsuario(_usuario);
+                }
+                else
+                {
+                    MessageBox.Show("Usuário ainda não foi cadastrado!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
         }
@@ -80,7 +115,7 @@ namespace InterfacesVisuais
             }
             else
             {
-                MessageBox.Show("Usuário ainda não foi cadastrado!", "Atenção", MessageBoxButtons.OK);
+                MessageBox.Show("Usuário ainda não foi cadastrado!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
     }
