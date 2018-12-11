@@ -13,6 +13,7 @@ namespace Nucleo.Negocio
 
         public string User { get; set; }
         public string Senha => _senha;
+        public string SenhaCriptografada => _senhaCriptografada;
 
         public Login(string user, string senha)
         {

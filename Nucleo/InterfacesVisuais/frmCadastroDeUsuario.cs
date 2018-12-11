@@ -30,9 +30,13 @@ namespace InterfacesVisuais
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            var conn = AuxilliarDeBd.Instancia.CreateConnection();
-            conn.Open();
-            conn.Dispose();
+            Usuario = new Usuario
+            {
+                Nome = txtNome.Text,
+                Classificacao = (EnumeradorClassificacaoUsuario)cboClassificacao.SelectedItem,
+                Login = new Login(txtUser.Text, txtSenha.Text)
+            };
+            
         }
     }
 }

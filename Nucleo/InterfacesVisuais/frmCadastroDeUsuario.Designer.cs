@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadastroDeUsuario));
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtNome = new System.Windows.Forms.TextBox();
             this.flwLateralBtn = new System.Windows.Forms.FlowLayoutPanel();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
@@ -49,12 +49,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.bsCboClassificacao)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txtNome
             // 
-            this.textBox1.Location = new System.Drawing.Point(104, 28);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(310, 20);
-            this.textBox1.TabIndex = 0;
+            this.txtNome.Location = new System.Drawing.Point(104, 28);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(310, 20);
+            this.txtNome.TabIndex = 0;
             // 
             // flwLateralBtn
             // 
@@ -182,7 +182,7 @@
             this.Controls.Add(this.lblTipo);
             this.Controls.Add(this.lblNome);
             this.Controls.Add(this.flwLateralBtn);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtNome);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmCadastroDeUsuario";
@@ -196,7 +196,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.FlowLayoutPanel flwLateralBtn;
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.Button btnEditar;
