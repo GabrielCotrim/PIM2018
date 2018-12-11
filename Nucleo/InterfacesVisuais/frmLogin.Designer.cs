@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.pnlLogin = new System.Windows.Forms.Panel();
             this.btnFechar = new System.Windows.Forms.Button();
@@ -35,8 +36,10 @@
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.cboUser = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.bsUsuarios = new System.Windows.Forms.BindingSource(this.components);
             this.pnlLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlLogin
@@ -61,6 +64,7 @@
             this.btnFechar.TabIndex = 3;
             this.btnFechar.Text = "Fechar";
             this.btnFechar.UseVisualStyleBackColor = true;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
             // btnLogin
             // 
@@ -70,6 +74,7 @@
             this.btnLogin.TabIndex = 2;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // txtSenha
             // 
@@ -80,6 +85,7 @@
             // 
             // cboUser
             // 
+            this.cboUser.DataSource = this.bsUsuarios;
             this.cboUser.FormattingEnabled = true;
             this.cboUser.Location = new System.Drawing.Point(57, 52);
             this.cboUser.Name = "cboUser";
@@ -111,6 +117,7 @@
             this.pnlLogin.ResumeLayout(false);
             this.pnlLogin.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsUsuarios)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -123,6 +130,7 @@
         private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.ComboBox cboUser;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.BindingSource bsUsuarios;
     }
 }
 

@@ -12,7 +12,7 @@ namespace Nucleo.Negocio
         private string _senha;
 
         public string User { get; set; }
-        public string Senha => _senha;
+        public string Senha { get { return _senha; }set { _senha = value; } }
         public string SenhaCriptografada => _senhaCriptografada;
 
         public Login(string user, string senha)
@@ -49,6 +49,11 @@ namespace Nucleo.Negocio
                 senhaDescriptografada = senhaDescriptografada + (char)(senha.ElementAt(i) ^ CHAVE);
 
             return senhaDescriptografada;
+        }
+
+        public override string ToString()
+        {
+            return User;
         }
 
         public override bool Equals(object obj)

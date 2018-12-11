@@ -1,4 +1,5 @@
-﻿using Nucleo.Negocio;
+﻿using Nucleo.Enumeradores;
+using Nucleo.Negocio;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,40 @@ namespace Nucleo.Mapeadores
 {
     public class MapeadorDeUsuario
     {
+        public List<Usuario> ObtenhaTodos()
+        {
+            var sql = $@"SELECT * FROM TBUsuario";
+
+            var usuarios = new List<Usuario>();
+            using (var dr = AuxilliarDeBd.Instancia.ExecuteReader(sql))
+            {
+                while (dr.Read())
+                {
+
+                    var ordinalCod = dr.GetOrdinal("UserCod");
+                    var ordinalNome = dr.GetOrdinal("UserNome");
+                    var ordinalTipo = dr.GetOrdinal("UserTipoUsuario");
+                    var ordinalUser = dr.GetOrdinal("UserNomeUser");
+                    var ordinalSenha = dr.GetOrdinal("UserSenha");
+                    var usuario = new Usuario
+                    {
+                        Codigo = dr.GetInt32(ordinalCod),
+                        Nome = dr.GetString(ordinalNome),
+                        Classificacao = EnumeradorClassificacaoUsuario.ObtenhaEnumerador(dr.GetInt32(ordinalTipo)),
+                        Login = new Login
+                        {
+                            User = dr.GetString(ordinalUser),
+                            Senha = Login.ObtenhaSenhaDiscriptografada(dr.GetString(ordinalSenha))
+                        }
+                    };
+
+                    usuarios.Add(usuario);
+                }
+                return usuarios;
+            }
+
+        }
+
         public void InsiraUsuario(Usuario usuario)
         {
             var sql = @"INSERT INTO TBUsuario (UserNome, UserTipoUsuario, UserNomeUser, UserSenha)

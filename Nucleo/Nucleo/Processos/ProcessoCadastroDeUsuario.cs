@@ -31,5 +31,10 @@ namespace Nucleo.Processos
         {
             mapeador.AtualizaUsuario(usuario);
         }
+
+        public List<Usuario> ObtenhaTodos()
+        {
+            return mapeador.ObtenhaTodos();
+        }
     }
 }

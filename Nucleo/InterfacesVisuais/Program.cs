@@ -16,7 +16,7 @@ namespace InterfacesVisuais
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmCadastroDeUsuario());
+            Application.Run(new frmLogin());
         }
     }
 }
