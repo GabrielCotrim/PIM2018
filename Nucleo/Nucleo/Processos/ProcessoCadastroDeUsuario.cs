@@ -37,5 +37,10 @@ namespace Nucleo.Processos
             return mapeador.ObtenhaTodos();
         }
 
+        public Usuario ObtenhaUsuario(Login login)
+        {
+            return mapeador.ObtenhaUsuario(login);
+        }
+
     }
 }

@@ -14,6 +14,7 @@ namespace Nucleo.Negocio
         public string User { get; set; }
         public string Senha { get { return _senha; }set { _senha = value; } }
         public string SenhaCriptografada => _senhaCriptografada;
+        public bool EstaLogado { get; set; }
 
         public string SenhaDescriptografada => ObtenhaSenhaDiscriptografada(_senhaCriptografada);
 

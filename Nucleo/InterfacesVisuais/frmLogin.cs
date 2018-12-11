@@ -11,6 +11,7 @@ namespace InterfacesVisuais
     public partial class frmLogin : Form
     {
         private ProcessoCadastroDeUsuario _processo = new ProcessoCadastroDeUsuario();
+        private Usuario _usuario = new Usuario();
 
         public frmLogin()
         {
@@ -40,7 +41,14 @@ namespace InterfacesVisuais
             if (!ehSenhaValida)
             {
                 MessageBox.Show("Senha Incorreta!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
             }
+
+            _usuario = _processo.ObtenhaUsuario((Login)cboUser.SelectedItem);
+
+            SessaoUsuario.Instancia.Usuario = _usuario;
+
+            this.DialogResult = DialogResult.OK;
         }
     }
 }

@@ -44,6 +44,34 @@ namespace Nucleo.Mapeadores
 
         }
 
+        public Usuario ObtenhaUsuario(Login login)
+        {
+            var sql = $@"SELECT * FROM TBUsuario WHERE UserNomeUser = '{login.User}'";
+
+            var usuario = new Usuario();
+            using (var dr = AuxilliarDeBd.Instancia.ExecuteReader(sql))
+            {
+                if (dr.Read())
+                {
+                    var ordinalCod = dr.GetOrdinal("UserCod");
+                    var ordinalNome = dr.GetOrdinal("UserNome");
+                    var ordinalTipo = dr.GetOrdinal("UserTipoUsuario");
+                    var ordinalUser = dr.GetOrdinal("UserNomeUser");
+                    var ordinalSenha = dr.GetOrdinal("UserSenha");
+
+                    usuario.Codigo = dr.GetInt32(ordinalCod);
+                    usuario.Nome = dr.GetString(ordinalNome);
+                    usuario.Classificacao = EnumeradorClassificacaoUsuario.ObtenhaEnumerador(dr.GetInt32(ordinalTipo));
+                    usuario.Login = new Login
+                    {
+                        User = dr.GetString(ordinalUser),
+                        Senha = Login.ObtenhaSenhaDiscriptografada(dr.GetString(ordinalSenha))
+                    };
+                }
+                return usuario;
+            }
+        }
+
         public void InsiraUsuario(Usuario usuario)
         {
             var sql = @"INSERT INTO TBUsuario (UserNome, UserTipoUsuario, UserNomeUser, UserSenha)
