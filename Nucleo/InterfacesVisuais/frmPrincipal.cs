@@ -31,6 +31,11 @@ namespace InterfacesVisuais
 
         private void btnCadastrarProjeto_Click(object sender, EventArgs e)
         {
+            using (var frm = new frmCadastroProjeto())
+            {
+                if (frm.ShowDialog() == DialogResult.OK)
+                    bsProjetos.ResetBindings(false);
+            }
 
         }
     }

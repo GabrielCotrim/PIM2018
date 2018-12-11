@@ -31,9 +31,9 @@
             this.components = new System.ComponentModel.Container();
             this.flpEsquerda = new System.Windows.Forms.FlowLayoutPanel();
             this.tlpTopoInterno = new System.Windows.Forms.TableLayoutPanel();
-            this.btnMinhaVisao = new System.Windows.Forms.Button();
-            this.btnVerTarefas = new System.Windows.Forms.Button();
             this.btnCriarTarefas = new System.Windows.Forms.Button();
+            this.btnVerTarefas = new System.Windows.Forms.Button();
+            this.btnMinhaVisao = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.lblProjetos = new System.Windows.Forms.Label();
@@ -73,17 +73,17 @@
             this.tlpTopoInterno.Size = new System.Drawing.Size(112, 172);
             this.tlpTopoInterno.TabIndex = 2;
             // 
-            // btnMinhaVisao
+            // btnCriarTarefas
             // 
-            this.btnMinhaVisao.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnMinhaVisao.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMinhaVisao.Location = new System.Drawing.Point(0, 0);
-            this.btnMinhaVisao.Margin = new System.Windows.Forms.Padding(0);
-            this.btnMinhaVisao.Name = "btnMinhaVisao";
-            this.btnMinhaVisao.Size = new System.Drawing.Size(112, 57);
-            this.btnMinhaVisao.TabIndex = 2;
-            this.btnMinhaVisao.Text = "Minhas Tarefas";
-            this.btnMinhaVisao.UseVisualStyleBackColor = true;
+            this.btnCriarTarefas.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnCriarTarefas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCriarTarefas.Location = new System.Drawing.Point(0, 114);
+            this.btnCriarTarefas.Margin = new System.Windows.Forms.Padding(0);
+            this.btnCriarTarefas.Name = "btnCriarTarefas";
+            this.btnCriarTarefas.Size = new System.Drawing.Size(112, 58);
+            this.btnCriarTarefas.TabIndex = 2;
+            this.btnCriarTarefas.Text = "Criar Tarefas";
+            this.btnCriarTarefas.UseVisualStyleBackColor = true;
             // 
             // btnVerTarefas
             // 
@@ -97,17 +97,17 @@
             this.btnVerTarefas.Text = "Ver Tarefas";
             this.btnVerTarefas.UseVisualStyleBackColor = true;
             // 
-            // btnCriarTarefas
+            // btnMinhaVisao
             // 
-            this.btnCriarTarefas.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnCriarTarefas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCriarTarefas.Location = new System.Drawing.Point(0, 114);
-            this.btnCriarTarefas.Margin = new System.Windows.Forms.Padding(0);
-            this.btnCriarTarefas.Name = "btnCriarTarefas";
-            this.btnCriarTarefas.Size = new System.Drawing.Size(112, 58);
-            this.btnCriarTarefas.TabIndex = 2;
-            this.btnCriarTarefas.Text = "Criar Tarefas";
-            this.btnCriarTarefas.UseVisualStyleBackColor = true;
+            this.btnMinhaVisao.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnMinhaVisao.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMinhaVisao.Location = new System.Drawing.Point(0, 0);
+            this.btnMinhaVisao.Margin = new System.Windows.Forms.Padding(0);
+            this.btnMinhaVisao.Name = "btnMinhaVisao";
+            this.btnMinhaVisao.Size = new System.Drawing.Size(112, 57);
+            this.btnMinhaVisao.TabIndex = 2;
+            this.btnMinhaVisao.Text = "Minhas Tarefas";
+            this.btnMinhaVisao.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
