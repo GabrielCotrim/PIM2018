@@ -35,17 +35,16 @@
             this.btnLogin = new System.Windows.Forms.Button();
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.cboUser = new System.Windows.Forms.ComboBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bsUsuarios = new System.Windows.Forms.BindingSource(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlLogin.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsUsuarios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlLogin
             // 
             this.pnlLogin.BackColor = System.Drawing.SystemColors.Control;
-            this.pnlLogin.BackgroundImage = global::InterfacesVisuais.Properties.Resources.logon;
             this.pnlLogin.Controls.Add(this.btnFechar);
             this.pnlLogin.Controls.Add(this.btnLogin);
             this.pnlLogin.Controls.Add(this.txtSenha);
@@ -95,7 +94,6 @@
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::InterfacesVisuais.Properties.Resources._2560x1600_light_green_solid_color_background;
             this.pictureBox1.InitialImage = null;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
@@ -116,8 +114,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.pnlLogin.ResumeLayout(false);
             this.pnlLogin.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsUsuarios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
