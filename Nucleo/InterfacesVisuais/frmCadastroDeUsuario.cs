@@ -1,6 +1,7 @@
 ﻿using Nucleo.Enumeradores;
 using Nucleo.Mapeadores;
 using Nucleo.Negocio;
+using Nucleo.Processos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,7 +17,8 @@ namespace InterfacesVisuais
 {
     public partial class frmCadastroDeUsuario : Form
     {
-        Usuario Usuario;
+        private Usuario _usuario;
+        private ProcessoCadastroDeUsuario _processo = new ProcessoCadastroDeUsuario();
 
         public frmCadastroDeUsuario()
         {
@@ -30,13 +32,15 @@ namespace InterfacesVisuais
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            Usuario = new Usuario
+            _usuario = new Usuario
             {
                 Nome = txtNome.Text,
                 Classificacao = (EnumeradorClassificacaoUsuario)cboClassificacao.SelectedItem,
                 Login = new Login(txtUser.Text, txtSenha.Text)
             };
-            
+
+            _processo.InsiraUsuario(_usuario);
+
         }
     }
 }

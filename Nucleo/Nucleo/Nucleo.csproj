@@ -58,6 +58,7 @@
     <Compile Include="Negocio\Projeto.cs" />
     <Compile Include="Negocio\Tarefa.cs" />
     <Compile Include="Negocio\Usuario.cs" />
+    <Compile Include="Processos\ProcessoCadastroDeUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
