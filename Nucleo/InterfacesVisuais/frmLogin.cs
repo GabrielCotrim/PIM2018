@@ -1,4 +1,5 @@
 ﻿using Nucleo.Enumeradores;
+using Nucleo.Negocio;
 using Nucleo.Processos;
 using System;
 using System.Collections.Generic;
@@ -29,7 +30,12 @@ namespace InterfacesVisuais
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-
+            if (string.IsNullOrEmpty(txtSenha.Text))
+            {
+                MessageBox.Show("Insira a senha!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            var ehSenhaValida = ((Login) cboUser.SelectedItem).EhSenhaValida(txtSenha.Text);
         }
     }
 }

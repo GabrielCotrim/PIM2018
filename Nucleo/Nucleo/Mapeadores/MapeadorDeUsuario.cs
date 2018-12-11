@@ -33,7 +33,7 @@ namespace Nucleo.Mapeadores
                         Login = new Login
                         {
                             User = dr.GetString(ordinalUser),
-                            Senha = Login.ObtenhaSenhaDiscriptografada(dr.GetString(ordinalSenha))
+                            Senha = dr.GetString(ordinalSenha)
                         }
                     };
 
