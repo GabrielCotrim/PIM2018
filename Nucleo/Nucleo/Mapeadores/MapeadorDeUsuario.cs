@@ -33,7 +33,7 @@ namespace Nucleo.Mapeadores
                         Login = new Login
                         {
                             User = dr.GetString(ordinalUser),
-                            Senha = dr.GetString(ordinalSenha)
+                            Senha = Login.ObtenhaSenhaDiscriptografada(dr.GetString(ordinalSenha))
                         }
                     };
 
@@ -85,7 +85,7 @@ namespace Nucleo.Mapeadores
         public void AtualizaUsuario(Usuario usuario)
         {
             var sql = $@"UPDATE TBUsuario SET UserNome = @UserNome, UserTipoUsuario = @UserTipoUsuario, UserNomeUser =  @UserNomeUser, UserSenha = @UserSenha
-           WHERE UserNomeUser LIKE '{usuario.Login.User}'";
+           WHERE UserNomeUser = '{usuario.Login.User}'";
 
             using (var command = AuxilliarDeBd.Instancia.CreateCommand(sql))
             {
@@ -122,7 +122,7 @@ namespace Nucleo.Mapeadores
 
         public void DeleteUsuario(Usuario usuario)
         {
-            var sql = $@"DELETE FROM TBUsuario WHERE UserNomeUser LIKE '{usuario.Login.User}'";
+            var sql = $@"DELETE FROM TBUsuario WHERE UserNomeUser = '{usuario.Login.User}'";
 
             using (var command = AuxilliarDeBd.Instancia.CreateCommand(sql))
             {
@@ -135,7 +135,7 @@ namespace Nucleo.Mapeadores
         public bool PossuiUsuarioCadastrado(Usuario usuario)
         {
             var sql = $@"SELECT * FROM TBUsuario 
-                        WHERE UserNomeUser LIKE '{usuario.Login.User}'";
+                        WHERE UserNomeUser = '{usuario.Login.User}'";
 
             using (var dr = AuxilliarDeBd.Instancia.ExecuteReader(sql))
             {

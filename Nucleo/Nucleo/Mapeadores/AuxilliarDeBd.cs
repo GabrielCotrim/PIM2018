@@ -9,7 +9,7 @@ namespace Nucleo.Mapeadores
     public class AuxilliarDeBd
     {
 
-        private const string CONEXAOPADRAO = @"Data Source=DESKTOP-PC1EFCM;Initial Catalog=BdPIM;Integrated Security=True";
+        private const string CONEXAOPADRAO = @"Data Source=DEV-18;Initial Catalog=BdPIM;Integrated Security=True";
 
         public static AuxilliarDeBd Instancia
         { get

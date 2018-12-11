@@ -36,6 +36,11 @@ namespace InterfacesVisuais
                 return;
             }
             var ehSenhaValida = ((Login) cboUser.SelectedItem).EhSenhaValida(txtSenha.Text);
+
+            if (!ehSenhaValida)
+            {
+                MessageBox.Show("Senha Incorreta!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
         }
     }
 }

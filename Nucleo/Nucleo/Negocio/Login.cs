@@ -6,7 +6,7 @@ namespace Nucleo.Negocio
 
     public class Login
     {
-        private const int CHAVE = 1010;
+        private const char CHAVE = 'b';
 
         private string _senhaCriptografada => ObtenhaSenhaCriptografada(_senha);
         private string _senha;
@@ -14,6 +14,8 @@ namespace Nucleo.Negocio
         public string User { get; set; }
         public string Senha { get { return _senha; }set { _senha = value; } }
         public string SenhaCriptografada => _senhaCriptografada;
+
+        public string SenhaDescriptografada => ObtenhaSenhaDiscriptografada(_senhaCriptografada);
 
         public Login(string user, string senha)
         {
@@ -28,10 +30,10 @@ namespace Nucleo.Negocio
 
         public bool EhSenhaValida(string senhaDescriptografada)
         {
-            return senhaDescriptografada.Equals(_senha);
+            return senhaDescriptografada.Equals(SenhaDescriptografada);
         }
 
-        private string ObtenhaSenhaCriptografada(string senha)
+        public static string ObtenhaSenhaCriptografada(string senha)
         {
             var senhaCriptografada = string.Empty;
 
