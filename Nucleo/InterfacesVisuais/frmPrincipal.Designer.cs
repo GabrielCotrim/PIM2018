@@ -39,6 +39,7 @@
             this.lblProjetos = new System.Windows.Forms.Label();
             this.cboProjetos = new System.Windows.Forms.ComboBox();
             this.bsProjetos = new System.Windows.Forms.BindingSource(this.components);
+            this.btnCadastrarProjeto = new System.Windows.Forms.Button();
             this.flpEsquerda.SuspendLayout();
             this.tlpTopoInterno.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -116,25 +117,27 @@
             this.label1.Location = new System.Drawing.Point(10, 3);
             this.label1.Margin = new System.Windows.Forms.Padding(10, 3, 3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(161, 30);
+            this.label1.Size = new System.Drawing.Size(161, 33);
             this.label1.TabIndex = 0;
             this.label1.Text = "A Tarefando";
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.BackColor = System.Drawing.SystemColors.ControlText;
-            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 110F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 111F));
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.lblProjetos, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.cboProjetos, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.btnCadastrarProjeto, 2, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(115, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1110, 60);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
@@ -143,10 +146,10 @@
             this.lblProjetos.AutoSize = true;
             this.lblProjetos.Font = new System.Drawing.Font("Segoe UI Symbol", 19F);
             this.lblProjetos.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblProjetos.Location = new System.Drawing.Point(1000, 0);
+            this.lblProjetos.Location = new System.Drawing.Point(889, 0);
             this.lblProjetos.Margin = new System.Windows.Forms.Padding(0);
             this.lblProjetos.Name = "lblProjetos";
-            this.lblProjetos.Size = new System.Drawing.Size(109, 33);
+            this.lblProjetos.Size = new System.Drawing.Size(109, 36);
             this.lblProjetos.TabIndex = 1;
             this.lblProjetos.Text = "Projetos";
             this.lblProjetos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -156,10 +159,22 @@
             this.cboProjetos.DataSource = this.bsProjetos;
             this.cboProjetos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cboProjetos.FormattingEnabled = true;
-            this.cboProjetos.Location = new System.Drawing.Point(1003, 36);
+            this.cboProjetos.Location = new System.Drawing.Point(892, 39);
             this.cboProjetos.Name = "cboProjetos";
             this.cboProjetos.Size = new System.Drawing.Size(104, 21);
             this.cboProjetos.TabIndex = 2;
+            // 
+            // btnCadastrarProjeto
+            // 
+            this.btnCadastrarProjeto.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnCadastrarProjeto.Enabled = false;
+            this.btnCadastrarProjeto.Location = new System.Drawing.Point(1002, 3);
+            this.btnCadastrarProjeto.Name = "btnCadastrarProjeto";
+            this.btnCadastrarProjeto.Size = new System.Drawing.Size(105, 30);
+            this.btnCadastrarProjeto.TabIndex = 3;
+            this.btnCadastrarProjeto.Text = "Cadastrar Projeto";
+            this.btnCadastrarProjeto.UseVisualStyleBackColor = true;
+            this.btnCadastrarProjeto.Click += new System.EventHandler(this.btnCadastrarProjeto_Click);
             // 
             // frmPrincipal
             // 
@@ -193,5 +208,6 @@
         private System.Windows.Forms.Label lblProjetos;
         private System.Windows.Forms.ComboBox cboProjetos;
         private System.Windows.Forms.BindingSource bsProjetos;
+        private System.Windows.Forms.Button btnCadastrarProjeto;
     }
 }

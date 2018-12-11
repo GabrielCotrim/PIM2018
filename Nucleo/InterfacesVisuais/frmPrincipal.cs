@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Nucleo.Negocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,6 +24,14 @@ namespace InterfacesVisuais
             var frm = new frmLogin();
             if(frm.ShowDialog() == DialogResult.OK)
                 this.Visible = true;
+
+            if (SessaoUsuario.Instancia.Usuario.EhAdministrador)
+                btnCadastrarProjeto.Enabled = true;
+        }
+
+        private void btnCadastrarProjeto_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
