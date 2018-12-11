@@ -21,6 +21,11 @@ namespace Nucleo.Negocio
             this.User = user;
         }
 
+        public Login()
+        {
+
+        }
+
         public bool EhSenhaValida(string senhaDescriptografada)
         {
             return senhaDescriptografada.Equals(_senha);
@@ -44,6 +49,11 @@ namespace Nucleo.Negocio
                 senhaDescriptografada = senhaDescriptografada + (char)(senha.ElementAt(i) ^ CHAVE);
 
             return senhaDescriptografada;
+        }
+
+        public override bool Equals(object obj)
+        {
+            return obj is Login && ((Login)obj).User.Equals(User);
         }
     }
 }

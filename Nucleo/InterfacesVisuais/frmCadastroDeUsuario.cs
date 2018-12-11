@@ -42,5 +42,46 @@ namespace InterfacesVisuais
             _processo.InsiraUsuario(_usuario);
 
         }
+
+        private void btnDeletar_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtUser.Text))
+            {
+                _usuario = new Usuario
+                {
+                    Login = new Login
+                    {
+                        User = txtUser.Text
+                    }
+                };
+                if (_processo.PossuiUsuario(_usuario))
+                {
+                    _processo.DeleteUsuario(_usuario);
+                }
+            }
+        }
+
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            _usuario = new Usuario
+            {
+                Nome = txtNome.Text,
+                Classificacao = (EnumeradorClassificacaoUsuario)cboClassificacao.SelectedItem,
+                Login = new Login(txtUser.Text, txtSenha.Text)
+            };
+            if(_processo.PossuiUsuario(_usuario))
+            {
+                _processo.AtualizaUsuario(_usuario);
+            }
+            else
+            {
+                MessageBox.Show("Usuário ainda não foi cadastrado!", "Atenção", MessageBoxButtons.OK);
+            }
+        }
     }
 }

@@ -16,5 +16,20 @@ namespace Nucleo.Processos
         {
             mapeador.InsiraUsuario(usuario);
         }
+
+        public bool PossuiUsuario(Usuario usuario)
+        {
+            return mapeador.PossuiUsuarioCadastrado(usuario);
+        }
+
+        public void DeleteUsuario(Usuario usuario)
+        {
+            mapeador.DeleteUsuario(usuario);
+        }
+
+        public void AtualizaUsuario(Usuario usuario)
+        {
+            mapeador.AtualizaUsuario(usuario);
+        }
     }
 }

@@ -40,31 +40,29 @@ namespace Nucleo.Mapeadores
 
         public SqlCommand CreateCommand(string sql)
         {
-            using (var conn = CreateConnection())
-            {
+                var conn = CreateConnection();
+
+                conn.Open();
+
                 var transacao = conn.BeginTransaction();
-                using (var command = conn.CreateCommand())
-                {
-                    command.Transaction = transacao;
-                    command.CommandText = sql;
-                    command.CommandType = CommandType.Text;
-                    return command;
-                }
-            }
+
+                var command = conn.CreateCommand();
+                command.Transaction = transacao;
+                command.CommandText = sql;
+                command.CommandType = CommandType.Text;
+                return command;
         }
 
         public SqlDataReader ExecuteReader(string sql)
         {
-            using (var conn = CreateConnection())
-            {
-                conn.Open();
-                using (var command = conn.CreateCommand())
-                {
-                    command.CommandText = sql;
-                    command.CommandType = CommandType.Text;
-                    return command.ExecuteReader();
-                }
-            }
+            var conn = CreateConnection();
+            conn.Open();
+
+            var command = conn.CreateCommand();
+            command.CommandText = sql;
+            command.CommandType = CommandType.Text;
+
+            return command.ExecuteReader();
         }
 
         public SqlConnection CreateConnection()
