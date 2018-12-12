@@ -17,15 +17,18 @@ namespace InterfacesVisuais
         public frmCadastroProjeto()
         {
             InitializeComponent();
+
+            dgvCategorias.AllowUserToOrderColumns = true;
+            dgvCategorias.Columns.Add("Descricao", "Descrição");
+
+            dgvCategorias.Columns[0].Width = 480;
+            dgvCategorias.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
         }
 
         protected override void OnShown(EventArgs e)
         {
+            dgvCategorias.DataSource = bsCategorias;
             bsClassificacao.DataSource = EnumeradorClassificacaoUsuario.PROJETO;
-
-            dgvCategorias.Columns.Add(nameof(Categoria.Descricao), "Descrição");
-            dgvCategorias.Columns[0].Width = 500;
-            dgvCategorias.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
         }
 
         private Projeto ObtenhaProjeto()
@@ -55,8 +58,13 @@ namespace InterfacesVisuais
         private void btnAdicionar_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(txtDescricaoCategoria.Text))
-                bsCategorias.DataSource = new Categoria { Descricao = txtDescricaoCategoria.Text };
-            bsCategorias.ResetBindings(false);
+            {
+                var categorias = new List<Categoria>();
+                categorias.Add(new Categoria { Descricao = txtDescricaoCategoria.Text });
+                bsCategorias.DataSource = categorias;
+                bsCategorias.ResetBindings(false);
+            }
+                
         }
     }
 }
