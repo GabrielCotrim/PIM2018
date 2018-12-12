@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Nucleo.Utilitarios
 {
-    class HelperDataGrid
+    public class HelperDataGrid
     {
+        public static DataGridViewColumn
     }
 }
