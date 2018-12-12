@@ -55,5 +55,18 @@ namespace InterfacesVisuais
                 frm.ShowDialog();
             }
         }
+
+        private void btnMinhaVisao_Click(object sender, EventArgs e)
+        {
+            using (var frm = new frmMinhasTarefas())
+            {
+                frm.ShowDialog();
+            }
+        }
+
+        private void btnVerTarefas_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

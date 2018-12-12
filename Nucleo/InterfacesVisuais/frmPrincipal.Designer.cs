@@ -35,18 +35,19 @@
             this.btnVerTarefas = new System.Windows.Forms.Button();
             this.btnMinhaVisao = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.bsProjetos = new System.Windows.Forms.BindingSource(this.components);
-            this.btnCadastrarProjeto = new System.Windows.Forms.Button();
             this.lblNome = new System.Windows.Forms.Label();
+            this.btnCadastrarProjeto = new System.Windows.Forms.Button();
+            this.btnCadastrarUsuarios = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.lblNomeProjeto = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.btnCadastrarUsuarios = new System.Windows.Forms.Button();
+            this.bsProjetos = new System.Windows.Forms.BindingSource(this.components);
+            this.pnlAjusteTamanho = new System.Windows.Forms.Panel();
             this.flpEsquerda.SuspendLayout();
             this.tlpTopoInterno.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bsProjetos)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bsProjetos)).BeginInit();
             this.SuspendLayout();
             // 
             // flpEsquerda
@@ -56,7 +57,7 @@
             this.flpEsquerda.Dock = System.Windows.Forms.DockStyle.Left;
             this.flpEsquerda.Location = new System.Drawing.Point(0, 0);
             this.flpEsquerda.Name = "flpEsquerda";
-            this.flpEsquerda.Size = new System.Drawing.Size(115, 639);
+            this.flpEsquerda.Size = new System.Drawing.Size(115, 636);
             this.flpEsquerda.TabIndex = 2;
             // 
             // tlpTopoInterno
@@ -99,6 +100,7 @@
             this.btnVerTarefas.TabIndex = 2;
             this.btnVerTarefas.Text = "Ver Tarefas";
             this.btnVerTarefas.UseVisualStyleBackColor = true;
+            this.btnVerTarefas.Click += new System.EventHandler(this.btnVerTarefas_Click);
             // 
             // btnMinhaVisao
             // 
@@ -111,6 +113,7 @@
             this.btnMinhaVisao.TabIndex = 2;
             this.btnMinhaVisao.Text = "Minhas Tarefas";
             this.btnMinhaVisao.UseVisualStyleBackColor = true;
+            this.btnMinhaVisao.Click += new System.EventHandler(this.btnMinhaVisao_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -132,6 +135,18 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1110, 60);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
+            // lblNome
+            // 
+            this.lblNome.AutoSize = true;
+            this.lblNome.Font = new System.Drawing.Font("Segoe UI Symbol", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNome.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblNome.Location = new System.Drawing.Point(10, 3);
+            this.lblNome.Margin = new System.Windows.Forms.Padding(10, 3, 3, 0);
+            this.lblNome.Name = "lblNome";
+            this.lblNome.Size = new System.Drawing.Size(119, 37);
+            this.lblNome.TabIndex = 0;
+            this.lblNome.Text = "HelpDev";
+            // 
             // btnCadastrarProjeto
             // 
             this.btnCadastrarProjeto.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -144,17 +159,17 @@
             this.btnCadastrarProjeto.UseVisualStyleBackColor = true;
             this.btnCadastrarProjeto.Click += new System.EventHandler(this.btnCadastrarProjeto_Click);
             // 
-            // lblNome
+            // btnCadastrarUsuarios
             // 
-            this.lblNome.AutoSize = true;
-            this.lblNome.Font = new System.Drawing.Font("Segoe UI Symbol", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNome.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblNome.Location = new System.Drawing.Point(10, 3);
-            this.lblNome.Margin = new System.Windows.Forms.Padding(10, 3, 3, 0);
-            this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(119, 37);
-            this.lblNome.TabIndex = 0;
-            this.lblNome.Text = "HelpDev";
+            this.btnCadastrarUsuarios.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnCadastrarUsuarios.Enabled = false;
+            this.btnCadastrarUsuarios.Location = new System.Drawing.Point(901, 3);
+            this.btnCadastrarUsuarios.Name = "btnCadastrarUsuarios";
+            this.btnCadastrarUsuarios.Size = new System.Drawing.Size(108, 54);
+            this.btnCadastrarUsuarios.TabIndex = 5;
+            this.btnCadastrarUsuarios.Text = "Cadastrar Usuários";
+            this.btnCadastrarUsuarios.UseVisualStyleBackColor = true;
+            this.btnCadastrarUsuarios.Click += new System.EventHandler(this.btnCadastrarUsuarios_Click);
             // 
             // tableLayoutPanel2
             // 
@@ -191,17 +206,13 @@
             this.comboBox1.Size = new System.Drawing.Size(97, 21);
             this.comboBox1.TabIndex = 1;
             // 
-            // btnCadastrarUsuarios
+            // pnlAjusteTamanho
             // 
-            this.btnCadastrarUsuarios.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnCadastrarUsuarios.Enabled = false;
-            this.btnCadastrarUsuarios.Location = new System.Drawing.Point(901, 3);
-            this.btnCadastrarUsuarios.Name = "btnCadastrarUsuarios";
-            this.btnCadastrarUsuarios.Size = new System.Drawing.Size(108, 54);
-            this.btnCadastrarUsuarios.TabIndex = 5;
-            this.btnCadastrarUsuarios.Text = "Cadastrar Usuários";
-            this.btnCadastrarUsuarios.UseVisualStyleBackColor = true;
-            this.btnCadastrarUsuarios.Click += new System.EventHandler(this.btnCadastrarUsuarios_Click);
+            this.pnlAjusteTamanho.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlAjusteTamanho.Location = new System.Drawing.Point(115, 60);
+            this.pnlAjusteTamanho.Name = "pnlAjusteTamanho";
+            this.pnlAjusteTamanho.Size = new System.Drawing.Size(1110, 576);
+            this.pnlAjusteTamanho.TabIndex = 3;
             // 
             // frmPrincipal
             // 
@@ -209,7 +220,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1225, 639);
+            this.ClientSize = new System.Drawing.Size(1225, 636);
+            this.Controls.Add(this.pnlAjusteTamanho);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.flpEsquerda);
             this.Name = "frmPrincipal";
@@ -219,9 +231,9 @@
             this.tlpTopoInterno.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bsProjetos)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bsProjetos)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -240,5 +252,6 @@
         private System.Windows.Forms.Label lblNomeProjeto;
         private System.Windows.Forms.Button btnCadastrarUsuarios;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Panel pnlAjusteTamanho;
     }
 }

@@ -14,6 +14,9 @@ namespace InterfacesVisuais
 {
     public partial class frmCadastroProjeto : Form
     {
+
+        private List<Categoria> _categorias = new List<Categoria>();
+
         public frmCadastroProjeto()
         {
             InitializeComponent();
@@ -41,7 +44,7 @@ namespace InterfacesVisuais
                     Nome = txtNome.Text,
                     Classificacao = (EnumeradorClassificacaoUsuario)cboClassificacao.SelectedItem,
                 },
-                Categorias = (List<Categoria>) bsCategorias.DataSource
+                Categorias = _categorias
             };
             return projeto;
         }
@@ -60,9 +63,8 @@ namespace InterfacesVisuais
         {
             if (!string.IsNullOrEmpty(txtDescricaoCategoria.Text))
             {
-                var categorias = new List<Categoria>();
-                categorias.Add(new Categoria { Descricao = txtDescricaoCategoria.Text });
-                bsCategorias.DataSource = categorias;
+                _categorias.Add(new Categoria { Descricao = txtDescricaoCategoria.Text });
+                bsCategorias.DataSource = _categorias;
                 bsCategorias.ResetBindings(false);
             }
                 
