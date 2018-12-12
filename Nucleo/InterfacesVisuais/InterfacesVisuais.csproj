@@ -64,6 +64,12 @@
     <Compile Include="frmCadastroTarefa.Designer.cs">
       <DependentUpon>frmCadastroTarefa.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmVisualizarTarefa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVisualizarTarefa.Designer.cs">
+      <DependentUpon>frmVisualizarTarefa.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,8 +96,8 @@
     <EmbeddedResource Include="frmCadastroProjeto.resx">
       <DependentUpon>frmCadastroProjeto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCadastroTarefa.resx">
-      <DependentUpon>frmCadastroTarefa.cs</DependentUpon>
+    <EmbeddedResource Include="frmVisualizarTarefa.resx">
+      <DependentUpon>frmVisualizarTarefa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>

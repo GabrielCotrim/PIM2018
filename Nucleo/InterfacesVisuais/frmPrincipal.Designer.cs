@@ -41,8 +41,8 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.lblNomeProjeto = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.bsProjetos = new System.Windows.Forms.BindingSource(this.components);
             this.pnlAjusteTamanho = new System.Windows.Forms.Panel();
+            this.bsProjetos = new System.Windows.Forms.BindingSource(this.components);
             this.flpEsquerda.SuspendLayout();
             this.tlpTopoInterno.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -88,6 +88,7 @@
             this.btnCriarTarefas.TabIndex = 2;
             this.btnCriarTarefas.Text = "Criar Tarefas";
             this.btnCriarTarefas.UseVisualStyleBackColor = true;
+            this.btnCriarTarefas.Click += new System.EventHandler(this.btnCriarTarefas_Click);
             // 
             // btnVerTarefas
             // 

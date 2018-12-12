@@ -66,6 +66,14 @@ namespace InterfacesVisuais
 
         private void btnVerTarefas_Click(object sender, EventArgs e)
         {
+            using (var frm = new frmVisualizarTarefa())
+            {
+                frm.ShowDialog();
+            }
+        }
+
+        private void btnCriarTarefas_Click(object sender, EventArgs e)
+        {
 
         }
     }
