@@ -39,8 +39,9 @@ namespace InterfacesVisuais
                 Usuario = new Usuario
                 {
                     Nome = txtNome.Text,
-                    Classificacao = (EnumeradorClassificacaoUsuario)cboClassificacao.SelectedItem
-                }
+                    Classificacao = (EnumeradorClassificacaoUsuario)cboClassificacao.SelectedItem,
+                },
+                Categorias = (List<Categoria>) bsCategorias.DataSource
             };
             return projeto;
         }
