@@ -61,6 +61,7 @@
     <Compile Include="Negocio\Usuario.cs" />
     <Compile Include="Processos\ProcessoCadastroDeUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilitarios\HelperDataGrid.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
