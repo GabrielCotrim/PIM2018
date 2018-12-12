@@ -38,36 +38,36 @@
             this.lblCategoria = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.cboRelator = new System.Windows.Forms.ComboBox();
+            this.bsRelator = new System.Windows.Forms.BindingSource(this.components);
             this.cboPrioridade = new System.Windows.Forms.ComboBox();
+            this.bsPrioridade = new System.Windows.Forms.BindingSource(this.components);
             this.cboAtribuido = new System.Windows.Forms.ComboBox();
+            this.bsAtribuido = new System.Windows.Forms.BindingSource(this.components);
             this.cboEstado = new System.Windows.Forms.ComboBox();
+            this.bsEstado = new System.Windows.Forms.BindingSource(this.components);
             this.cboGravidade = new System.Windows.Forms.ComboBox();
+            this.bsGravidade = new System.Windows.Forms.BindingSource(this.components);
             this.cboCategoria = new System.Windows.Forms.ComboBox();
+            this.bsCategoria = new System.Windows.Forms.BindingSource(this.components);
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnFiltrar = new System.Windows.Forms.Button();
             this.btnOlhar = new System.Windows.Forms.Button();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblVisualizar = new System.Windows.Forms.Label();
             this.dgvTarefas = new System.Windows.Forms.DataGridView();
-            this.bsCategoria = new System.Windows.Forms.BindingSource(this.components);
-            this.bsGravidade = new System.Windows.Forms.BindingSource(this.components);
-            this.bsEstado = new System.Windows.Forms.BindingSource(this.components);
-            this.bsAtribuido = new System.Windows.Forms.BindingSource(this.components);
-            this.bsPrioridade = new System.Windows.Forms.BindingSource(this.components);
-            this.bsRelator = new System.Windows.Forms.BindingSource(this.components);
-            this.btnFiltrar = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bsRelator)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsPrioridade)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsAtribuido)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsEstado)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsGravidade)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsCategoria)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTarefas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsCategoria)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsGravidade)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsEstado)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsAtribuido)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsPrioridade)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsRelator)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -254,6 +254,15 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(80, 410);
             this.flowLayoutPanel1.TabIndex = 2;
             // 
+            // btnFiltrar
+            // 
+            this.btnFiltrar.Location = new System.Drawing.Point(3, 3);
+            this.btnFiltrar.Name = "btnFiltrar";
+            this.btnFiltrar.Size = new System.Drawing.Size(75, 38);
+            this.btnFiltrar.TabIndex = 1;
+            this.btnFiltrar.Text = "Filtrar";
+            this.btnFiltrar.UseVisualStyleBackColor = true;
+            // 
             // btnOlhar
             // 
             this.btnOlhar.Location = new System.Drawing.Point(3, 47);
@@ -315,15 +324,6 @@
             this.dgvTarefas.Size = new System.Drawing.Size(727, 332);
             this.dgvTarefas.TabIndex = 1;
             // 
-            // btnFiltrar
-            // 
-            this.btnFiltrar.Location = new System.Drawing.Point(3, 3);
-            this.btnFiltrar.Name = "btnFiltrar";
-            this.btnFiltrar.Size = new System.Drawing.Size(75, 38);
-            this.btnFiltrar.TabIndex = 1;
-            this.btnFiltrar.Text = "Filtrar";
-            this.btnFiltrar.UseVisualStyleBackColor = true;
-            // 
             // frmVisualizarTarefa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -339,17 +339,17 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.bsRelator)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsPrioridade)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsAtribuido)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsEstado)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsGravidade)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsCategoria)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTarefas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsCategoria)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsGravidade)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsEstado)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsAtribuido)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsPrioridade)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsRelator)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -1,6 +1,7 @@
 ﻿using Nucleo.Enumeradores;
 using Nucleo.Negocio;
 using Nucleo.Processos;
+using Nucleo.Utilitarios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,6 +20,18 @@ namespace InterfacesVisuais
         public frmVisualizarTarefa()
         {
             InitializeComponent();
+
+            var helper = new HelperDataGrid(dgvTarefas);
+            MonteColunas(helper);
+        }
+
+        private static void MonteColunas(HelperDataGrid helper)
+        {
+            helper.AddColumn("Categoria", "Descricao");
+            helper.AddColumn("Gravidade", "Gravidade");
+            helper.AddColumn("Estado", "Descricao");
+            helper.AddColumn("Prioridade", "Prioridade");
+            helper.AddColumn("Relator", "Relator");
         }
 
         protected override void OnShown(EventArgs e)

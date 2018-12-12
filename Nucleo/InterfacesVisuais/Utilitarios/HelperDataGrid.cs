@@ -36,7 +36,7 @@ namespace Nucleo.Utilitarios
             DataGrid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
 
-        public DataGridViewColumn CrieColuna(string headerText ,string nomeDaPropriedade)
+        public DataGridViewColumn AddColumn(string headerText ,string nomeDaPropriedade)
         {
             var coluna = new DataGridViewTextBoxColumn();
             coluna.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;

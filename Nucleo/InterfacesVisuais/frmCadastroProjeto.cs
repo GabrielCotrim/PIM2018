@@ -1,5 +1,6 @@
 ﻿using Nucleo.Enumeradores;
 using Nucleo.Negocio;
+using Nucleo.Utilitarios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -26,6 +27,13 @@ namespace InterfacesVisuais
 
             dgvCategorias.Columns[0].Width = 480;
             dgvCategorias.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            var helper = new HelperDataGrid(dgvCategorias);
+            MonteColuna(helper);
+        }
+
+        private static void MonteColuna(HelperDataGrid helper)
+        {
+            helper.AddColumn("Categoria", "Descricao");
         }
 
         protected override void OnShown(EventArgs e)
