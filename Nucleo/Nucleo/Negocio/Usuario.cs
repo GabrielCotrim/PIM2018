@@ -14,6 +14,11 @@ namespace Nucleo.Negocio
         public Login Login { get; set; }
         public bool EhAdministrador => Classificacao.Equals(EnumeradorClassificacaoUsuario.ADMINISTRADOR);
 
+        public override string ToString()
+        {
+            return Nome;
+        }
+
         public override int GetHashCode()
         {
             return Codigo.GetHashCode();

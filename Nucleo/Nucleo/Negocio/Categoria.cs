@@ -9,5 +9,10 @@ namespace Nucleo.Negocio
     public class Categoria : EntidadeDeNegocio
     {
         public string Descricao { get; set; }
+
+        public override string ToString()
+        {
+            return Descricao;
+        }
     }
 }
