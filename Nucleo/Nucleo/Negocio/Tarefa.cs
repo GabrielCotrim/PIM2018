@@ -11,7 +11,6 @@ namespace Nucleo.Negocio
 
         public Usuario Relator { get; set; }
         public Usuario UsuarioAtribuido { get; set; }
-        public List<Categoria> Categorias { get; set; }
         public EnumeradorSituacaoDaTarefa Situacao { get; set; } = EnumeradorSituacaoDaTarefa.NOVO;
         public EnumeradorGravidadeDaTarefa Gravidade { get; set; }
         public EnumeradorPrioridadeDaTarefa Prioridade { get; set; }
@@ -19,7 +18,6 @@ namespace Nucleo.Negocio
         public string Descricao { get; set; }
         public DateTime DataCriacaoDaTarefa { get; set; }
         public DateTime? DataEncerramentoTarefa { get; set; }
-        public Projeto Projeto => Categorias.FirstOrDefault<Categoria>().Projeto;
-
+        public Projeto Projeto { get; set; }
     }
 }

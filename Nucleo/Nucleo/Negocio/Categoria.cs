@@ -9,6 +9,5 @@ namespace Nucleo.Negocio
     public class Categoria : EntidadeDeNegocio
     {
         public string Descricao { get; set; }
-        public Projeto Projeto { get; set; }
     }
 }

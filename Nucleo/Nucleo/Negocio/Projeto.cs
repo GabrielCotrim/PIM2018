@@ -11,5 +11,6 @@ namespace Nucleo.Negocio
     {
         public string Descricao { get; set; }
         public Usuario Usuario { get; set; }
+        public List<Categoria> Categorias { get; set; }
     }
 }
