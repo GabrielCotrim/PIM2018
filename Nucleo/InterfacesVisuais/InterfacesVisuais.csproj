@@ -58,6 +58,12 @@
     <Compile Include="frmCadastroProjeto.Designer.cs">
       <DependentUpon>frmCadastroProjeto.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCadastroTarefa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadastroTarefa.Designer.cs">
+      <DependentUpon>frmCadastroTarefa.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +89,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmCadastroProjeto.resx">
       <DependentUpon>frmCadastroProjeto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadastroTarefa.resx">
+      <DependentUpon>frmCadastroTarefa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
