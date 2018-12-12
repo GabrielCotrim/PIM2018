@@ -24,9 +24,18 @@ namespace InterfacesVisuais
             var frm = new frmLogin();
             if(frm.ShowDialog() == DialogResult.OK)
                 this.Visible = true;
+            else if(frm.DialogResult == DialogResult.Cancel)
+            {
+                Close();
+                return;
+            }
 
             if (SessaoUsuario.Instancia.Usuario.EhAdministrador)
+            {
                 btnCadastrarProjeto.Enabled = true;
+                btnCadastrarUsuarios.Enabled = true;
+            }
+                
         }
 
         private void btnCadastrarProjeto_Click(object sender, EventArgs e)
@@ -37,6 +46,14 @@ namespace InterfacesVisuais
                     bsProjetos.ResetBindings(false);
             }
 
+        }
+
+        private void btnCadastrarUsuarios_Click(object sender, EventArgs e)
+        {
+            using (var frm = new frmCadastroDeUsuario())
+            {
+                frm.ShowDialog();
+            }
         }
     }
 }

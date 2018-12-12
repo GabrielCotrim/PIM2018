@@ -41,6 +41,8 @@ namespace InterfacesVisuais
             if (!ehSenhaValida)
             {
                 MessageBox.Show("Senha Incorreta!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                if(this.IsDisposed)
+                    this.DialogResult = DialogResult.Cancel;
                 return;
             }
 

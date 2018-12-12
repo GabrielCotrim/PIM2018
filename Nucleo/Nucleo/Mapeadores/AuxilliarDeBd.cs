@@ -9,7 +9,7 @@ namespace Nucleo.Mapeadores
     public class AuxilliarDeBd
     {
 
-        private const string CONEXAOPADRAO = @"Data Source=DEV-18;Initial Catalog=BdPIM;Integrated Security=True";
+        private const string CONEXAOPADRAO = @"Data Source=DESKTOP-PC1EFCM;Initial Catalog=BdPIM;Integrated Security=True";
 
         public static AuxilliarDeBd Instancia
         { get
@@ -56,13 +56,21 @@ namespace Nucleo.Mapeadores
         public SqlDataReader ExecuteReader(string sql)
         {
             var conn = CreateConnection();
-            conn.Open();
+            try
+            {
+                conn.Open();
+            }
+            catch(SqlException e)
+            {
+                
+            }
 
             var command = conn.CreateCommand();
             command.CommandText = sql;
             command.CommandType = CommandType.Text;
 
             return command.ExecuteReader();
+
         }
 
         public SqlConnection CreateConnection()
